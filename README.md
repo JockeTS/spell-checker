@@ -13,7 +13,7 @@ It includes several methods:
 * Giving spelling suggestions based on input
 
 ## Quick Start
-* git clone https://github.com/JockeTS/maze-runner.git
+* git clone https://github.com/JockeTS/spell-checker.git
 * cd spell-checker/
 * python3 app.py
 * navigate to: http://127.0.0.1:5000
