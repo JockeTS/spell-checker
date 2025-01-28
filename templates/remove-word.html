@@ -1,0 +1,11 @@
+{% include 'header.html' %}
+
+<h1>Remove Word</h1>
+
+<form method="POST" action="{{ url_for('remove_word_post') }}">
+    <label for="fword">Enter word:</label><br>
+    <input type="text" id="fword" name="fword"><br>
+    <input type="submit" value="Remove">
+</form>
+
+{% include 'footer.html' %}

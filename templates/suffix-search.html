@@ -1,0 +1,15 @@
+{% include 'header.html' %}
+
+<h1>Suffix Search</h1>
+
+<form method="POST" action="{{ url_for('suffix_search_post') }}">
+    <label for="fsuf">Enter suffix:</label><br>
+    <input type="text" id="fsuf" name="fsuf" value="{{ suffix }}"><br>
+    <input type="submit" value="Search">
+</form>
+
+{% for match in matches %}
+    <p>{{ match }}</p>
+{% endfor %}
+
+{% include 'footer.html' %}

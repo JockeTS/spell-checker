@@ -1,0 +1,11 @@
+{% include 'header.html' %}
+
+<h1>Check Word</h1>
+
+<form method="POST" action="{{ url_for('check_word_post') }}">
+    <label for="fword">Enter word:</label><br>
+    <input type="text" id="fword" name="fword"><br>
+    <input type="submit" value="Check">
+</form>
+
+{% include 'footer.html' %}

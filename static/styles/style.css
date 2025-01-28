@@ -1,0 +1,41 @@
+body {
+    padding-top: 4em;
+    padding-bottom: 2em;
+}
+
+h1,
+h2,
+p,
+form {
+    text-align: center;
+}
+
+form > * {
+    margin: 8px 0;
+}
+
+.img-container {
+    text-align: center;
+}
+
+/*
+table, th, td {
+    border: 1px solid;
+    padding: 0.25em;
+}
+*/
+
+table {
+    margin: 24px auto;
+}
+
+th, td {
+    border-bottom: 1px dotted gray;
+    padding: 0.5em;
+}
+
+.message {
+    background-color: rgb(244, 244, 117);
+    max-width: 50%;
+    margin: 8px auto;
+}

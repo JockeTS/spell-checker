@@ -1,0 +1,20 @@
+{% include 'header.html' %}
+
+<h1>Change Dictionary</h1>
+
+<form method="POST" action="{{ url_for('change_dict_post') }}">
+    <label for="dicts">Choose a dictionary:</label>
+    <select id="dicts" name="dicts">
+        {% for dct in dicts %}
+            {% if dct == selected %}
+                <option value="{{ dct }}" selected>{{ dct }}</option>
+            {% else %}
+                <option value="{{ dct }}">{{ dct }}</option>
+            {% endif %}
+            
+        {% endfor %}
+    </select>
+    <input type="submit" value="Select">
+</form>
+
+{% include 'footer.html' %}

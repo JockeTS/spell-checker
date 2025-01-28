@@ -1,0 +1,29 @@
+{% include 'header.html' %}
+
+{% set vars = {'ctr': 0} %}
+
+<h1>List Words</h1>
+
+<h2>Current dictionary contains {{ word_list|length }} words.</h2>
+
+<table>
+    <tr>
+    {% for word in word_list %}
+    
+        {% if word[0] != word_list[loop.index - 2][0] %}
+            <tr><th colspan="5">{{ word[0].upper() }}</th></tr>
+            {% if vars.update({'ctr': 0}) %} {% endif %}
+        {% endif %}
+
+        <td>{{ word }}</td>
+        {% if vars.update({'ctr': vars.ctr + 1}) %} {% endif %}
+
+        {% if vars.ctr == 5 %}
+            </tr><tr>
+            {% if vars.update({'ctr': 0}) %} {% endif %}
+        {% endif %}
+
+    {% endfor %}
+</table>
+
+{% include 'footer.html' %}

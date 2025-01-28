@@ -1,0 +1,15 @@
+{% include 'header.html' %}
+
+<h1>Prefix Search</h1>
+
+<form method="POST" action="{{ url_for('prefix_search_post') }}">
+    <label for="fpre">Enter prefix:</label><br>
+    <input type="text" id="fpre" name="fpre" value="{{ prefix }}"><br>
+    <input type="submit" value="Search">
+</form>
+
+{% for match in matches %}
+    <p>{{ match[0] }} ({{ match[1] }})</p>
+{% endfor %}
+
+{% include 'footer.html' %}

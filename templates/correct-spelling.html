@@ -1,0 +1,15 @@
+{% include 'header.html' %}
+
+<h1>Correct Spelling</h1>
+
+<form method="POST" action="{{ url_for('correct_spelling_post') }}">
+    <label for="fword">Enter word:</label><br>
+    <input type="text" id="fword" name="fword" value="{{ fword }}"><br>
+    <input type="submit" value="Search">
+</form>
+
+{% for sugg in suggs %}
+    <p>{{ sugg }}</p>
+{% endfor %}
+
+{% include 'footer.html' %}
