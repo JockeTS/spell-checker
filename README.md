@@ -1,7 +1,7 @@
 # Spell Checker
 
 ## Description
-A spell checking website built with Flask. It uses a Trie data structure consisting of nodes to store a dictionary of English words. Each node represents a letter and recursion is used to traverse them.
+A spell checking website built with **Flask**. It uses a **Trie** data structure consisting of nodes to store a dictionary of English words. Each node represents a letter and recursion is used to traverse them.
 
 The Trie object is created from a text file whenever the user navigates to one of the main routes. 
 It includes several methods:
